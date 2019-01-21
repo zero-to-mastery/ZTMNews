@@ -28,6 +28,3 @@ The web app will be responsible for taking the data from the database via the Bo
 - Resource bookmarking, allowing users to favourite resources they like
 - Report/Flag Resources
 - Admin panel for editing/deleteing resources, along with adding/updating the resouce's category
-
-## Tech Stacks
-Discord Bot: The Discord bot will be written in Javascript, utilising [Discord.js](https://discord.js.org/#/) and [Passport-Discord](https://www.npmjs.com/package/passport-discord)
