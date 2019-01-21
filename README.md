@@ -2,7 +2,7 @@
 
 The aim of this project is to create a web app that will display all of the student submitted resources, from the #dev-resources channel and potentially other channels on the ZTM Discord server. A Discord bot will be responsible for automatically adding new resources to a database, with the possibility of manually triggering the addition of new resources from other channels.
 
-## The Discord Bot
+## The Discord Bot - ([Bot's Repo](https://github.com/zeroDevs/devRes-Bot))
 ![](https://img.shields.io/badge/Language-Javascript-yellow.svg?style=for-the-badge&logo=javascript)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![](https://img.shields.io/badge/module-discord.js-orange.svg?style=for-the-badge&logo=discord)
@@ -28,6 +28,3 @@ The web app will be responsible for taking the data from the database via the Bo
 - Resource bookmarking, allowing users to favourite resources they like
 - Report/Flag Resources
 - Admin panel for editing/deleteing resources, along with adding/updating the resouce's category
-
-## Tech Stacks
-Discord Bot: The Discord bot will be written in Javascript, utilising [Discord.js](https://discord.js.org/#/) and [Passport-Discord](https://www.npmjs.com/package/passport-discord)
