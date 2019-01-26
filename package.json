@@ -2,6 +2,7 @@
   "name": "dev-res",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://zerodevs.github.io/dev-resources-frontend/",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
