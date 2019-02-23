@@ -1,0 +1,58 @@
+.card {
+    background: rgba(255, 255, 255, 0.301);
+    display: flex;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.567);
+    border-radius: 10px;
+    margin: 25px 50px
+}
+
+.cardImg {
+    min-width: 200px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    border: 2px solid white
+}
+
+.cardDesc {
+    padding: 0 50px
+}
+
+.cardDesc h2 {
+    font-family: 'Lato', sans-serif;
+    color: var(--orange);
+}
+
+.cardDesc p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff
+}
+
+.bookmark {
+    position: relative;
+    background: rgb(179, 178, 178);
+    border-radius: 10px 0 100% 0px;
+    min-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    left: 50px;
+    top: 75px
+}
+
+.bookmark i {
+    position: relative;
+    right: -10px;
+    top: 10px;
+    font-size: 20px;
+    color: #fff
+}
+
+.bookmarkActive {
+    background: var(--orange);
+}
+.cardActive {
+    border: 2px solid var(--orange);
+}
