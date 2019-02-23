@@ -3,7 +3,7 @@ import './navbar.css'
 
 const Navbar = () => (
     <nav className="navbar">
-        <a class="navbar-title" href="/">Rustys Resources</a>
+        <a className="navbar-title" href="/">Rustys Resources</a>
     </nav>
 );
 
