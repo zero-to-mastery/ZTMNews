@@ -4,7 +4,7 @@
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.567);
     border-radius: 10px;
-    margin: 25px 50px
+    margin: 20px 50px
 }
 
 .cardImg {
@@ -24,6 +24,7 @@
 .cardDesc h2 {
     font-family: 'Lato', sans-serif;
     color: var(--orange);
+    margin: 0
 }
 
 .cardDesc p {
@@ -31,28 +32,27 @@
     color: #fff
 }
 
-.bookmark {
-    position: relative;
-    background: rgb(179, 178, 178);
-    border-radius: 10px 0 100% 0px;
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 50px;
-    left: 50px;
-    top: 75px
+.resOptions {
+    display:flex;
+    padding: 10px 0 0;
+    margin-bottom: 0
+}
+.cardIcon {
+    width: 100%;
+    background: #fff;
+    border-radius: 10%;
+    padding: 8px 15px;
+    margin: 0 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1em;
+    color: var(--orange);
+    text-align: center
+}
+.cardIcon i {
+    width: 15px
 }
 
-.bookmark i {
-    position: relative;
-    right: -10px;
-    top: 10px;
-    font-size: 20px;
-    color: #fff
-}
-
-.bookmarkActive {
+.iconActive {
     background: var(--orange);
-}
-.cardActive {
-    border: 2px solid var(--orange);
+    color: #fff
 }
