@@ -9,9 +9,6 @@ const Card = ({ resource, active, upvotes }) => {
 
     return (
         <div className="card">
-
-            
-
             <div>
                 <div className="cardImg" style={imgStyle}>
 
