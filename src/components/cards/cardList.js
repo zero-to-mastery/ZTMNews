@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './card';
 
-const CardList = ({ resources }) => {
+const CardList = ({ resources, modal }) => {
   return (
     <section id="cardContainer">
       {
@@ -12,6 +12,7 @@ const CardList = ({ resources }) => {
                 key={i}
                 resource={resource.meta}
                 upvotes={resource.upvotes}
+                modal={modal}
               />
            
           );

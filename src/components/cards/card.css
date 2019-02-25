@@ -1,10 +1,19 @@
-.card {
+.rescard {
     background: rgba(255, 255, 255, 0.301);
     display: flex;
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.567);
     border-radius: 10px;
     margin: 20px 50px
+}
+
+.rescard:hover {
+    cursor: pointer;
+    border-color: var(--orange);
+    background: rgba(53, 53, 53, 0.301);
+    -webkit-box-shadow: 8px 10px 21px -9px rgba(207,127,0,0.61);
+    -moz-box-shadow: 8px 10px 21px -9px rgba(207,127,0,0.61);
+    box-shadow: 8px 10px 21px -9px rgba(207,127,0,0.61);
 }
 
 .cardImg {
