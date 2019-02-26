@@ -1,0 +1,30 @@
+.resHeader a {
+    text-decoration: none;
+}
+
+.resHeader h1 {
+    color: var(--orange);
+    font-size: 1.6em
+}
+
+.resHeader p {
+    display: block;
+    color: #616161
+}
+
+.resHeader img {
+    padding: 5px;
+    border: 1px solid var(--orange);
+}
+
+.resHeader button {
+    color: rgb(126, 126, 126);
+    font-size: 0.7em;
+    padding: 3.4px 10px;
+    margin-top: 0;
+    margin-right: 8px
+}
+
+.resHeader button i {
+    color: var(--orange)
+}

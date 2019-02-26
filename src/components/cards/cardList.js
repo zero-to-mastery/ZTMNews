@@ -1,17 +1,18 @@
 import React from 'react';
 import Card from './card';
 
-const CardList = ({ resources }) => {
+const CardList = ({ resources, onClick }) => {
   return (
     <section id="cardContainer">
       {
-        resources.map((resource, i) => {
+        Object.keys(resources).map((res, i) => {
           return (
 
               <Card 
                 key={i}
-                resource={resource.meta}
-                upvotes={resource.upvotes}
+                slug={Object.keys(resources)[1]}
+                resource={resources[res]}
+                onClick={onClick}
               />
            
           );
