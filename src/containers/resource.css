@@ -1,0 +1,10 @@
+.resWrapper {
+    background: #0f0f0f57;
+    width: 100%;
+    height: 100%;
+    padding: 50px
+}
+
+.resBody {
+    padding: 20px 0;
+}

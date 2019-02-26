@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './card';
 
-const CardList = ({ resources, modal }) => {
+const CardList = ({ resources, modal, onClick }) => {
   return (
     <section id="cardContainer">
       {
@@ -10,9 +10,11 @@ const CardList = ({ resources, modal }) => {
 
               <Card 
                 key={i}
+                id={resource._id}
                 resource={resource.meta}
                 upvotes={resource.upvotes}
                 modal={modal}
+                onClick={onClick}
               />
            
           );

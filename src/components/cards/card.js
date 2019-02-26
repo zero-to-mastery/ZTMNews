@@ -1,14 +1,14 @@
 import React from 'react';
 import './card.css'
 
-const Card = ({ resource, active, upvotes, modal }) => {
+const Card = ({ resource, active, upvotes, modal, onClick, id }) => {
 
     const imgStyle = {
         backgroundImage: `url(${resource.image})`
     };
 
     return (
-        <div className="rescard" onClick={() => modal(resource)}>
+        <div className="rescard" onClick={() => onClick(`/resource/${id}`)}>
             <div>
                 <div className="cardImg" style={imgStyle}>
 
