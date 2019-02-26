@@ -13,11 +13,11 @@ const ResOptions = ({ res }) => {
         </div>
 
         <div className="col-md-6">
-            <button className="btn btn-outline-warning btn-block m-2"><i class="fas fa-edit"></i> Edit</button>
+            <button className="btn btn-outline-warning btn-block m-2"><i className="fas fa-edit"></i> Edit</button>
         </div>
 
         <div className="col-md-6">
-            <button className="btn btn-outline-warning btn-block m-2"><i class="fas fa-flag"></i> Report</button>
+            <button className="btn btn-outline-warning btn-block m-2"><i className="fas fa-flag"></i> Report</button>
         </div>
 
     </div>

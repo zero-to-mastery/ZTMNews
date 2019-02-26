@@ -30,7 +30,6 @@ class App extends Component {
   }
   componentDidUpdate() {
     history.listen((location, action) => {
-      console.log(location)
       this.routeHandler()
     });
   }
@@ -45,14 +44,19 @@ class App extends Component {
     this.setState({path: sections[1]})
   }
 
-  changeRoute = (r) => {
+  changeRoute = (r,) => {
     console.log("CHANGING ROUTE", r)
     history.push(r, { some: 'state' })
   }
 
+  viewResource = (slug) => {
+    this.changeRoute(`/resource/${slug}`)
+  }
+
   render() {
+
     const container = {
-      home: <Home resources={this.state.resources} onClick={(r) => this.changeRoute(r)} />,
+      home: <Home resources={this.state.resources} onClick={(res) => this.viewResource(res)} />,
       user: <User />,
       dashboard: <Dashboard />,
       resource: <Resource res={this.state.resources} id={this.state.path}/>,

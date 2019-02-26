@@ -1,14 +1,15 @@
 import React from 'react';
 import './card.css'
 
-const Card = ({ resource, active, upvotes, modal, onClick, id }) => {
+const Card = ({ resource, onClick, slug }) => {
+    console.log(slug)
 
     const imgStyle = {
-        backgroundImage: `url(${resource.image})`
+        backgroundImage: `url(${resource.meta.image})`
     };
 
     return (
-        <div className="rescard" onClick={() => onClick(`/resource/${id}`)}>
+        <div className="rescard" onClick={() => onClick(slug)}>
             <div>
                 <div className="cardImg" style={imgStyle}>
 
@@ -21,8 +22,8 @@ const Card = ({ resource, active, upvotes, modal, onClick, id }) => {
 
 
             <div className="cardDesc">
-                <h2>{resource.title}</h2>
-                <p>{resource.description}</p>
+                <h2>{resource.meta.title}</h2>
+                <p>{resource.meta.description}</p>
             </div>
         </div>
     );

@@ -5,7 +5,6 @@ import ResDesc from '../components/resource/resDesc';
 import ResOptions from '../components/resource/resOptions';
 
 const ResourceFound = ({ res }) => {
-    console.log(res)
     return (
         <div className="resWrapper">
             <ResHeader res={res} />
