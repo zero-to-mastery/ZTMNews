@@ -2,6 +2,7 @@ import React from 'react';
 import './resHeader.css'
 
 const ResHeader = ({ res }) => {
+    console.log(res)
     return (
         <div className="resHeader">
                 <div className="row">

@@ -10,7 +10,7 @@ const CardList = ({ resources, onClick }) => {
 
               <Card 
                 key={i}
-                slug={Object.keys(resources)[1]}
+                slug={Object.keys(resources)[i]}
                 resource={resources[res]}
                 onClick={onClick}
               />
