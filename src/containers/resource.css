@@ -5,6 +5,19 @@
     padding: 50px
 }
 
+.resBox {
+    padding: 20px;
+    background: #1d1d1d57;
+    border: 1px solid #494949;
+    color: #fff
+}
+
+.resBox h5 {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-size: small
+}
+
 .resBody {
     padding: 20px 0;
 }

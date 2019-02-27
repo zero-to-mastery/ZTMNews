@@ -1,6 +1,7 @@
-.resDescr {
-    padding: 20px;
-    background: #1d1d1d57;
-    border: 1px solid #494949;
-    color: #fff
+.resDesc-footer .postedBy{
+    width: 25px
+}
+
+.resDesc-footer hr {
+    border-color: #353535
 }
