@@ -4,6 +4,8 @@ import './card.css'
 const Card = ({ resource, onClick, slug }) => {
     console.log(slug)
 
+    if(!resource.meta.image.includes("http") || resource.meta.image.includes("vanguardngr")) resource.meta.image = `https://picsum.photos/200/?random}`
+
     const imgStyle = {
         backgroundImage: `url(${resource.meta.image})`
     };
