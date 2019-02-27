@@ -17,8 +17,8 @@
 }
 
 .cardImg {
-    min-width: 200px;
-    min-height: 200px;
+    width: 250px;
+    height: 250px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -64,4 +64,49 @@
 .iconActive {
     background: var(--orange);
     color: #fff
+}
+
+
+/* New Mason Cards */
+.cardRes {
+    background: rgba(22, 14, 6, 0.301);
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 6px;
+}
+
+.cardRes img {
+    border-radius: 6px 6px 0 0;
+    background: #fff
+}
+.cardRes h1 {
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ color: var(--orange);
+ font-size: larger
+}
+
+.cardRes p {
+    color: rgb(131, 131, 131);
+    font-size: small
+}
+
+.cardRes .card-footer {
+    border-top: 1px solid #f0f0f04d;
+    background: rgba(0, 0, 0, 0.201);
+}
+
+.footerButtons {
+    color: #f0f0f04d;
+    padding: 2px 10px
+}
+.footerButtons i {
+    padding: 0 8px
+}
+
+.voteBtn:hover {
+    color: gold;
+    cursor: pointer;
+}
+.bookmarkBtn:hover {
+    color: rgb(250, 186, 197);
+    cursor: pointer;
 }

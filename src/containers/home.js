@@ -1,10 +1,10 @@
 import React from 'react';
-import CardList from '../components/cards/cardList';
+import DisplayCards from '../components/cards/displayCards';
 
-const Home = ({ resources, onClick }) => {
+const Home = ({ resources, onClick, display }) => {
     return (
         <div>
-            <CardList resources={resources} onClick={onClick} />
+            <DisplayCards resources={resources} onClick={onClick} display={display} />
         </div>
     )
 };
