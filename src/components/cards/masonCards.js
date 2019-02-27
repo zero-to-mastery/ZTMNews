@@ -8,7 +8,7 @@ const MasonCards = ({ resource, onClick, slug }) => {
 
     
         return (
-            <div className="p-2">
+            <div className="p-2" onClick={() => onClick(slug)}>
                 <div class="card cardRes">
                     <img class="card-img-top img-respsonsive" src={resource.meta.image} alt={resource.meta.title.slice(0, 15)} />
                     <div class="card-body">

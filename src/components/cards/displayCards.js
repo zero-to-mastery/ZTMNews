@@ -7,7 +7,7 @@ const DisplayCards = ({ resources, onClick, display }) => {
 
   if(display !== "mason") {
     return (
-      <div className="card-columns p-5">
+      <div className="card-columns px-5 mt-3">
         {
           Object.keys(resources).map((res, i) => {
             return (

@@ -69,7 +69,7 @@ class App extends Component {
   render() {
 
     const container = {
-      home: <Home resources={this.state.resources} onClick={(res) => this.viewResource(res)} display={this.state.display} />,
+      home: <Home resources={this.state.resources} onClick={(res) => this.viewResource(res)} display={this.state.display} changeDisplay={() => this.changeDisplayType()} />,
       user: <User />,
       dashboard: <Dashboard />,
       resource: <Resource res={this.state.resources} id={this.state.path}/>,
@@ -81,7 +81,6 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <button onClick={() => this.changeDisplayType()}>{this.state.display}</button>
         {container[this.state.route]}
       </div>
     );
