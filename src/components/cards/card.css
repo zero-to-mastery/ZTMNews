@@ -74,6 +74,15 @@
     border-radius: 6px;
 }
 
+.cardRes:hover {
+    cursor: pointer;
+    border-color: var(--orange);
+    background: rgba(53, 53, 53, 0.301);
+    -webkit-box-shadow: 8px 10px 21px -9px rgba(207,127,0,0.61);
+    -moz-box-shadow: 8px 10px 21px -9px rgba(207,127,0,0.61);
+    box-shadow: 8px 10px 21px -9px rgba(207,127,0,0.61);
+}
+
 .cardRes img {
     border-radius: 6px 6px 0 0;
     background: #fff
@@ -109,4 +118,33 @@
 .bookmarkBtn:hover {
     color: rgb(250, 186, 197);
     cursor: pointer;
+}
+
+/* ListView */
+
+.cardList {
+    border: 1px solid #f0f0f04d;
+    margin-bottom: 10px;
+    padding: 5px
+}
+
+.cardList h2 {
+    font-size: medium;
+    color: var(--orange)
+}
+
+.cardList p {
+    color: #f0f0f094;
+    font-size: small;
+    margin-bottom: 0; 
+}
+
+.cardList i {
+    /* color: #f0f0f04d; */
+    font-size: xx-large
+}
+.cardList h3 {
+    font-size: small;
+    color: #f0f0f04d;
+    margin-bottom: 0;
 }

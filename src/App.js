@@ -18,7 +18,7 @@ class App extends Component {
     this.state = {
       resources: [],
       route: `home`,
-      display: "mason"
+      display: "masonry"
     }
   }
 
@@ -26,7 +26,8 @@ class App extends Component {
     fetch('https://dev-resources.herokuapp.com/resource/all')
       .then(response => response.json())
       .then(resourceData => { this.setState({ resources: resourceData }) });
-      if(localStorage.getItem("display") === "list") this.setState({display: "list"})
+      if(localStorage.getItem("display") === undefined) this.setState({display: "masonry"})
+      else this.setState({display: localStorage.getItem("display")})
       this.routeHandler()
 
   }
@@ -37,14 +38,10 @@ class App extends Component {
   }
 
 
-  changeDisplayType = () => {
-    if(this.state.display === "mason") {
-      this.setState({display: "list"})
-      localStorage.setItem("display", "list");
-    }else{
-      this.setState({display: "mason"})
-      localStorage.setItem("display", "mason");
-    }
+  changeDisplayType = (opt) => {
+    console.log("CHANGIN TYPE HERE", opt)
+    this.setState({display: opt})
+    localStorage.setItem("display", opt);
   }
 
   routeHandler = () => {
@@ -69,7 +66,7 @@ class App extends Component {
   render() {
 
     const container = {
-      home: <Home resources={this.state.resources} onClick={(res) => this.viewResource(res)} display={this.state.display} changeDisplay={() => this.changeDisplayType()} />,
+      home: <Home resources={this.state.resources} onClick={(res) => this.viewResource(res)} display={this.state.display} changeDisplay={(opt) => this.changeDisplayType(opt)} />,
       user: <User />,
       dashboard: <Dashboard />,
       resource: <Resource res={this.state.resources} id={this.state.path}/>,
