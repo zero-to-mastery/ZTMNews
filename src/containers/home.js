@@ -12,7 +12,7 @@ const Home = ({ resources, onClick, display, changeDisplay }) => {
     }
     return (
         <div>
-            <div class="alert alert-warning" role="alert">
+            <div class="speech-bubble" role="alert">
                 Heads up! This is still very much a work in progress. Some aspects may take a while to load, contain bugs or be completely non functional
             </div>
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { createBrowserHistory } from 'history';
-import Navbar from './components/navbar/navbar';
+import MainSidebar from './components/sideNav/mainSidebar';
 import Resource from './containers/resource';
 import Home from './containers/home';
 import User from './containers/user';
@@ -18,7 +18,7 @@ class App extends Component {
     this.state = {
       resources: [],
       route: `home`,
-      display: "masonry"
+      display: "tableview",
     }
   }
 
@@ -26,7 +26,7 @@ class App extends Component {
     fetch('https://dev-resources.herokuapp.com/resource/all')
       .then(response => response.json())
       .then(resourceData => { this.setState({ resources: resourceData }) });
-      if(localStorage.getItem("display") === undefined) this.setState({display: "masonry"})
+      if(localStorage.getItem("display") === undefined) this.setState({display: "tableview"})
       else this.setState({display: localStorage.getItem("display")})
       this.routeHandler()
 
@@ -37,9 +37,7 @@ class App extends Component {
     });
   }
 
-
   changeDisplayType = (opt) => {
-    console.log("CHANGIN TYPE HERE", opt)
     this.setState({display: opt})
     localStorage.setItem("display", opt);
   }
@@ -72,12 +70,10 @@ class App extends Component {
       resource: <Resource res={this.state.resources} id={this.state.path}/>,
       notFound: <NotFound />
     }
-
-    console.log("DISPLAY", this.state.display)
     
     return (
       <div className="App">
-        <Navbar />
+        <MainSidebar />
         {container[this.state.route]}
       </div>
     );
