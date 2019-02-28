@@ -21,9 +21,9 @@ const Home = ({ resources, onClick, display, changeDisplay }) => {
             <div className={cardView[display]}>
                 {
                     Object.keys(resources).map((res, i) => {
-                        if (display === "masonry") return <MasonCards key={i} slug={Object.keys(resources)[i]} resource={resources[res]} onClick={onClick} />
                         if (display === "fullwidth") return <FullWidthCards key={i} slug={Object.keys(resources)[i]} resource={resources[res]} onClick={onClick} />
                         if (display === "tableview") return <ListCards key={i} slug={Object.keys(resources)[i]} resource={resources[res]} onClick={onClick} />
+                        else return <MasonCards key={i} slug={Object.keys(resources)[i]} resource={resources[res]} onClick={onClick} />
                     })
                 }
             </div>
