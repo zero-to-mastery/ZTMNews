@@ -89,7 +89,7 @@ class App extends Component {
       method: 'post',
     })
     .then(res => res.text())
-    .then(text => console.log())
+    .then(text => console.log(text))
     .catch(error => console.error('Error:', error));
   }
 
