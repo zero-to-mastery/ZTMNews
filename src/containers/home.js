@@ -3,7 +3,7 @@ import MasonCards from '../components/cards/masonCards'
 import LayoutOptions from '../components/layoutOptions/layoutOptions';
 import ListCards from '../components/cards/listCards';
 
-const Home = ({ resources, onClick, display, changeDisplay, upvote, userId }) => {
+const Home = ({ resources, onClick, display, changeDisplay, userId }) => {
     const cardView = {
         tableview: "px-5 mt-3",
         masonry: "card-columns px-5 mt-3"

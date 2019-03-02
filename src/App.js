@@ -62,7 +62,6 @@ class App extends Component {
             onClick={(slug) => this.changeRoute(`/resource/${slug}`)} 
             display={this.state.display} 
             changeDisplay={(opt) => this.changeDisplayType(opt)}
-            upvote={(slug, userId) => this.createUpvote(slug, userId)}
             userId={this.state.userId}
           />
       },
