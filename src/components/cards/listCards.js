@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListCards = ({ resource, onClick, slug }) => {
+const ListCards = ({ resource, onClick, upvote, hasVoted }) => {
 
   const trimSnippet = (type, snip) => {
     if(snip === undefined) return `No ${type}`
@@ -13,13 +13,12 @@ const ListCards = ({ resource, onClick, slug }) => {
     else return snip
   }
 
-
   return (
     <div className="cardList">
       <div className="row">
         <div className="col-md-1 py-2 text-center">
         <div className="footerButtons voteBtn">
-        <i className="fas fa-thumbs-up"></i>{resource.upvotes.length}
+        <i className={`fas fa-thumbs-up ${(hasVoted === true ? "vb-active" : "")}`} onClick={() => upvote()}></i>{resource.upvotes.length}
     </div>
           
         </div>

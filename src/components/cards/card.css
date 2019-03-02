@@ -6,7 +6,6 @@
 }
 
 .cardRes:hover {
-    cursor: pointer;
     border-color: var(--orange);
     background: rgba(53, 53, 53, 0.301);
     -webkit-box-shadow: 8px 10px 21px -9px rgba(207,127,0,0.61);
@@ -18,6 +17,10 @@
     border-radius: 6px 6px 0 0;
     background: #fff
 }
+.cardRes img, p, h1 {
+    cursor: pointer;
+}
+
 .cardRes h1 {
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  color: var(--orange);
@@ -46,9 +49,15 @@
     color: gold;
     cursor: pointer;
 }
+.vb-active {
+    color: gold;
+}
 .bookmarkBtn:hover {
     color: rgb(250, 186, 197);
     cursor: pointer;
+}
+.bm-active {
+    color: rgb(250, 186, 197);
 }
 
 /* ListView */

@@ -19,7 +19,8 @@ class App extends Component {
       resources: [],
       route: ``,
       display: `masonry`,
-      userId: 79604866807627777
+      baseURL: 'http://dev-resources.herokuapp.com',
+      userId: 179604866807627777
     }
   }
 
@@ -55,7 +56,15 @@ class App extends Component {
     
     const routes = [
       { path: "",
-        container: <Home resources={this.state.resources} onClick={(res) => this.viewResource(res)} display={this.state.display} changeDisplay={(opt) => this.changeDisplayType(opt)} />
+        container: 
+          <Home 
+            resources={this.state.resources} 
+            onClick={(slug) => this.changeRoute(`/resource/${slug}`)} 
+            display={this.state.display} 
+            changeDisplay={(opt) => this.changeDisplayType(opt)}
+            upvote={(slug, userId) => this.createUpvote(slug, userId)}
+            userId={this.state.userId}
+          />
       },
       {
         path: "resource",
@@ -76,25 +85,11 @@ class App extends Component {
 
   }
 
-  changeRoute = (r,) => {
-    history.push(r, { some: 'state' })
-  }
-
-  viewResource = (slug) => {
-    this.changeRoute(`/resource/${slug}`)
-  }
-
-  createUpvote = () => {
-    fetch(`https://dev-resources.herokuapp.com/resource/12-javascript-concepts-that-will-level-up-your-development-skills-5c7a8/79604866807627777/upvote`, {
-      method: 'post',
-    })
-    .then(res => res.text())
-    .then(text => console.log(text))
-    .catch(error => console.error('Error:', error));
+  changeRoute = (r) => {
+    history.push(r)
   }
 
   render() {
-this.createUpvote()
     return (
       <div className="App">
         <MainSidebar />
