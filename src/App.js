@@ -19,13 +19,14 @@ class App extends Component {
       resources: [],
       route: ``,
       display: `masonry`,
+      userId: 79604866807627777
     }
   }
 
   componentDidMount() {
     if(localStorage.getItem("display") === null) this.setState({display: "tableview"})
     else this.setState({display: localStorage.getItem("display")})
-    
+
     fetch('https://dev-resources.herokuapp.com/resource/all')
       .then(response => response.json())
       .then(resourceData => { this.setState({ resources: resourceData }) });
@@ -83,8 +84,16 @@ class App extends Component {
     this.changeRoute(`/resource/${slug}`)
   }
 
+  createUpvote = () => {
+    fetch(`https://dev-resources.herokuapp.com/resource/free-stock-images-amp-photos-by-stockfreeimagescom-5c7a7/79604866807627777/upvote`, {
+      method: 'post',
+    })
+    .then(res => console.log(res))
+    .catch(error => console.error('Error:', error));
+  }
+
   render() {
-    
+this.createUpvote()
     return (
       <div className="App">
         <MainSidebar />

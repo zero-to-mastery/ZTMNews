@@ -4,6 +4,7 @@ import LayoutOptions from '../components/layoutOptions/layoutOptions';
 import ListCards from '../components/cards/listCards';
 
 const Home = ({ resources, onClick, display, changeDisplay }) => {
+    console.log(resources)
     const cardView = {
         tableview: "px-5 mt-3",
         masonry: "card-columns px-5 mt-3"
