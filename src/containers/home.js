@@ -3,7 +3,7 @@ import MasonCards from '../components/cards/masonCards'
 import LayoutOptions from '../components/layoutOptions/layoutOptions';
 import ListCards from '../components/cards/listCards';
 
-const Home = ({ resources, onClick, display, changeDisplay, userId }) => {
+const Home = ({ resources, onClick, display, changeDisplay, userId, updateVotes }) => {
     const cardView = {
         tableview: "px-5 mt-3",
         masonry: "card-columns px-5 mt-3"
@@ -17,6 +17,8 @@ const Home = ({ resources, onClick, display, changeDisplay, userId }) => {
         .then(res => res.json())
         .then(json => console.log(json))
         .catch(error => console.error('Error:', error));
+
+        updateVotes()
     }
 
     const hasVoted = (upArry) => {

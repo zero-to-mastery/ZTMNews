@@ -52,6 +52,12 @@ class App extends Component {
     this.setState({route: sections[0], path: sections[1]})
   }
 
+  updateUpvotes = (a) => {
+    fetch('https://dev-resources.herokuapp.com/resource/all')
+      .then(response => response.json())
+      .then(resourceData => { this.setState({ resources: resourceData }) });
+  }
+
   displayRoute = () => {
     
     const routes = [
@@ -63,6 +69,7 @@ class App extends Component {
             display={this.state.display} 
             changeDisplay={(opt) => this.changeDisplayType(opt)}
             userId={this.state.userId}
+            updateVotes={(a)=> this.updateUpvotes(a)}
           />
       },
       {
