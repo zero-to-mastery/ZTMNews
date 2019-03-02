@@ -85,10 +85,11 @@ class App extends Component {
   }
 
   createUpvote = () => {
-    fetch(`https://dev-resources.herokuapp.com/resource/free-stock-images-amp-photos-by-stockfreeimagescom-5c7a7/79604866807627777/upvote`, {
+    fetch(`https://dev-resources.herokuapp.com/resource/12-javascript-concepts-that-will-level-up-your-development-skills-5c7a8/79604866807627777/upvote`, {
       method: 'post',
     })
-    .then(res => console.log(res))
+    .then(res => res.text())
+    .then(text => console.log())
     .catch(error => console.error('Error:', error));
   }
 
