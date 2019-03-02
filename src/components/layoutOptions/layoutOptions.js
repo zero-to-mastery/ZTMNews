@@ -1,13 +1,13 @@
 import React from 'react';
 
 const LayoutOptions = ({ display, changeDisplay }) => {
-    const viewArry = ["tableview", "fullwidth", "masonry"]
-    const name = {tableview: "Condensed", fullwidth: "Full Width", masonry: "Grid View"  }
+    const viewArry = ["tableview", "masonry"]
+    const name = {tableview: "Condensed", masonry: "Grid View"  }
 
 
     const isChecked = (opt) => {
-        if (display === undefined && opt === viewArry[0]) return true;
-        if (display === opt) return true;
+        if (display === opt) return true; 
+        else if (display === undefined && opt === viewArry[0]) return true;
     };
 
 

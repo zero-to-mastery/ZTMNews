@@ -17,20 +17,23 @@ class App extends Component {
     super(props)
     this.state = {
       resources: [],
-      route: `home`,
-      display: "tableview",
+      route: ``,
+      display: `masonry`,
     }
   }
 
   componentDidMount() {
+    if(localStorage.getItem("display") === null) this.setState({display: "tableview"})
+    else this.setState({display: localStorage.getItem("display")})
+    
     fetch('https://dev-resources.herokuapp.com/resource/all')
       .then(response => response.json())
       .then(resourceData => { this.setState({ resources: resourceData }) });
-      if(localStorage.getItem("display") === undefined) this.setState({display: "tableview"})
-      else this.setState({display: localStorage.getItem("display")})
-      this.routeHandler()
+    this.routeHandler()
 
+    
   }
+
   componentDidUpdate() {
     history.listen((location, action) => {
       this.routeHandler()
@@ -44,16 +47,35 @@ class App extends Component {
 
   routeHandler = () => {
     const sections = window.location.pathname.slice(1).split("/")
-    const pages = ["resource", "user", "dashboard"]
-    if(!pages.includes(sections[0])) {
-      (sections[0] === "" ? sections[0] = "home" : sections[0] = "notFound")
-    }
-    this.setState({route: sections[0]})
-    this.setState({path: sections[1]})
+    this.setState({route: sections[0], path: sections[1]})
+  }
+
+  displayRoute = () => {
+    
+    const routes = [
+      { path: "",
+        container: <Home resources={this.state.resources} onClick={(res) => this.viewResource(res)} display={this.state.display} changeDisplay={(opt) => this.changeDisplayType(opt)} />
+      },
+      {
+        path: "resource",
+        container: <Resource res={this.state.resources} id={this.state.path}/>
+      },
+      {
+        path: "user",
+        container: <User />
+      },
+      {
+        path: "dashboard",
+        container: <Dashboard />
+      }
+    ]
+
+    let matchedRoute = routes.find(route => route.path === this.state.route)
+    return matchedRoute ? matchedRoute.container : <NotFound />
+
   }
 
   changeRoute = (r,) => {
-    console.log("CHANGING ROUTE", r)
     history.push(r, { some: 'state' })
   }
 
@@ -62,19 +84,11 @@ class App extends Component {
   }
 
   render() {
-
-    const container = {
-      home: <Home resources={this.state.resources} onClick={(res) => this.viewResource(res)} display={this.state.display} changeDisplay={(opt) => this.changeDisplayType(opt)} />,
-      user: <User />,
-      dashboard: <Dashboard />,
-      resource: <Resource res={this.state.resources} id={this.state.path}/>,
-      notFound: <NotFound />
-    }
     
     return (
       <div className="App">
         <MainSidebar />
-        {container[this.state.route]}
+        {this.displayRoute()}
       </div>
     );
   }

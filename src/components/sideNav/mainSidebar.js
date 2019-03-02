@@ -3,8 +3,7 @@ import './mainSidebar.css';
 import rusty from '../../images/rusty.png';
 import rr from '../../images/rr.png';
 
-const MainSidebar = ({changeSidebar, sidebarState}) => {
-    console.log(sidebarState)
+const MainSidebar = () => {
 
     return (
         <nav className="main-menu">

@@ -19,7 +19,7 @@ const ListCards = ({ resource, onClick, slug }) => {
       <div className="row">
         <div className="col-md-1 py-2 text-center">
         <div className="footerButtons voteBtn">
-        <i class="fas fa-thumbs-up"></i>{resource.upvotes.length}
+        <i className="fas fa-thumbs-up"></i>{resource.upvotes.length}
     </div>
           
         </div>
