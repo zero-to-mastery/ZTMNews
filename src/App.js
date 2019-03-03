@@ -19,7 +19,6 @@ class App extends Component {
       resources: [],
       route: ``,
       display: `masonry`,
-      baseURL: 'http://dev-resources.herokuapp.com',
       userId: 179604866807627777
     }
   }
@@ -28,12 +27,10 @@ class App extends Component {
     if(localStorage.getItem("display") === null) this.setState({display: "tableview"})
     else this.setState({display: localStorage.getItem("display")})
 
-    fetch('https://dev-resources.herokuapp.com/resource/all')
+    fetch('http://162.243.169.202:3000/resource/all')
       .then(response => response.json())
       .then(resourceData => { this.setState({ resources: resourceData }) });
     this.routeHandler()
-
-    
   }
 
   componentDidUpdate() {
@@ -49,11 +46,14 @@ class App extends Component {
 
   routeHandler = () => {
     const sections = window.location.pathname.slice(1).split("/")
-    this.setState({route: sections[0], path: sections[1]})
+    console.log("Sections: ", sections)
+    if(sections[0] === "ZTMNews") this.setState({route: sections[1], path: sections[2]})
+    else this.setState({route: sections[0], path: sections[1]})
+    console.log("States:\n", `Route: ${this.state.route}`, `Path: ${this.state.path}` )
   }
 
   updateUpvotes = (a) => {
-    fetch('https://dev-resources.herokuapp.com/resource/all')
+    fetch('http://162.243.169.202:3000/resource/all')
       .then(response => response.json())
       .then(resourceData => { this.setState({ resources: resourceData }) });
   }
