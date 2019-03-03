@@ -1,5 +1,5 @@
 # ZTMNews - Frontend
-This repo is a front end you can use for [Coding_Challenge-15](https://github.com/zero-to-mastery/Coding_Challenge-15). Keep in mind that this is a template you can use to try and solve the challenge, however you are more then welcome to build your own front end like this one that lists the API call to our massive endpoint with all of the lists. What you chose to build is up to you. Plain JavaScript? Angular, React, Vue? Those all work!
+This repo is a frontend you can use for [Coding_Challenge-15](https://github.com/zero-to-mastery/Coding_Challenge-15). Keep in mind that this is a template for the challenge, however, you are more than welcome to build your own frontend website like this one that lists the API call to our massive endpoint with all of the resources. How you chose to build it is up to you. Plain JavaScript? Angular, React, Vue? Those all work! There are no guidelines other than: try and list all of these resources efficiently for a user. 
 
 If you do not want to work on your own frontend, but rather focus on optimization and the performance part of the challenge alone, you can fork the repository and get started!
 
