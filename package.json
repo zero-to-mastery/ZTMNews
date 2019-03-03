@@ -2,7 +2,7 @@
   "name": "dev-res",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zerodevs.github.io/dev-resources-frontend/",
+  "homepage": "https://zero-to-mastery.github.io/ztmnews/",
   "dependencies": {
     "history": "^4.7.2",
     "react": "^16.7.0",
@@ -13,7 +13,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
