@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    if(localStorage.getItem("display") === null) this.setState({display: "tableview"})
+    if(localStorage.getItem("display") === null) this.setState({display: "masonry"})
     else this.setState({display: localStorage.getItem("display")})
 
     fetch('https://ztmnews.zerobot.xyz/api/resources')
