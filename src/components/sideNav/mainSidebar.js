@@ -25,7 +25,7 @@ const MainSidebar = () => {
                     </a>
                 </li>
                 <li className="has-subnav">
-                    <a href="/about">
+                    <a href="about">
                         <i className="fa fa-laptop fa-2x"></i>
                         <span className="nav-text">
                             About
@@ -34,7 +34,7 @@ const MainSidebar = () => {
                 </li>
                 <hr ></hr>
                 <li className="has-subnav">
-                    <a href="/top">
+                    <a href="top">
                         <i className="fa fa-trophy fa-2x"></i>
                         <span className="nav-text">
                             Top Resources
@@ -43,7 +43,7 @@ const MainSidebar = () => {
                     
                 </li>
                 <li className="has-subnav">
-                    <a href="/new">
+                    <a href="new">
                        <i className="fa fa-clock fa-2x"></i>
                         <span className="nav-text">
                             New Resources

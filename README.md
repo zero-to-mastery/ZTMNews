@@ -9,7 +9,7 @@ To run the project:
 2. Run `npm install`
 3. Run `npm start`
 
-The endpoint you will need, if you decided to create your own front end is: http://162.243.169.202:3000/api/resources
+The endpoint you will need, if you decided to create your own front end is: https://ztmnews.zerobot.xyz/api/resources
 
 ## What inspired this challenge?
 A small team of fellow students have been working on a system to extract all the resources in the #dev-resource channel of the ZTM Discord server into a database. Where they can be presented on a frontend, Providing features such as upvoting and bookmarking the resource. So as a community we can create a collection of popular and useful resources.
