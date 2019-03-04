@@ -12,7 +12,7 @@ To run the project:
 The endpoint you will need, if you decided to create your own front end is: http://162.243.169.202:3000/api/resources
 
 ## What inspired this challenge?
-A small team of fellow students have been working on a system to extract all the resources in the #dev-resource channel of the ZTM Discord server into a databse. Where they can be presented on a frontend, Providing features such as upvoting and bookmarking the resource. So as a community we can create a collection of popular and useful resources.
+A small team of fellow students have been working on a system to extract all the resources in the #dev-resource channel of the ZTM Discord server into a database. Where they can be presented on a frontend, Providing features such as upvoting and bookmarking the resource. So as a community we can create a collection of popular and useful resources.
 
 If this sounds like a project you might like to contribute to, you can checkout the issues sections detailed below to find issues we would like help solving.
 
