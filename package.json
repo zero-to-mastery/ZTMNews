@@ -2,7 +2,7 @@
   "name": "ztmnews",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zero-to-mastery.github.io/ZTMnews/",
+  "homepage": "https://zero-to-mastery.github.io/ZTMNews/",
   "dependencies": {
     "history": "^4.7.2",
     "react": "^16.7.0",
