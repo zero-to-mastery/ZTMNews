@@ -10,12 +10,10 @@ const Home = ({ resources, onClick, display, changeDisplay, userId, updateVotes 
     }
 
     const submitUpvote = (slug) => {
-        console.log(`Attempting to create upvote for: \nSlug: ${slug} \nUser ID: ${userId}`)
         fetch(`https://dev-resources.herokuapp.com/resource/${slug}/${userId}/upvote`, {
           method: 'post',
         })
         .then(res => res.json())
-        .then(json => console.log(json))
         .catch(error => console.error('Error:', error));
 
         updateVotes()
@@ -37,7 +35,6 @@ const Home = ({ resources, onClick, display, changeDisplay, userId, updateVotes 
             <div className={cardView[display]}>
                 {
                     Object.keys(resources).map((res, i) => {
-                        console.log(resources[res])
                         if (display === "tableview") return <ListCards key={i} resource={resources[res]} onClick={onClick} upvote={() => submitUpvote(resources[res].slug)} hasVoted={hasVoted(resources[res].upvotes, userId)} />
                         else return <MasonCards key={i} resource={resources[res]} onClick={onClick} upvote={() => submitUpvote(resources[res].slug)} hasVoted={hasVoted(resources[res].upvotes, userId)} />
                     })

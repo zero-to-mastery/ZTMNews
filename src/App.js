@@ -46,10 +46,8 @@ class App extends Component {
 
   routeHandler = () => {
     const sections = window.location.pathname.slice(1).split("/")
-    console.log("Sections: ", sections)
     if(sections[0] === "ZTMNews") this.setState({route: sections[1], path: sections[2]})
     else this.setState({route: sections[0], path: sections[1]})
-    console.log("States:\n", `Route: ${this.state.route}`, `Path: ${this.state.path}` )
   }
 
   updateUpvotes = (a) => {
