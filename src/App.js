@@ -5,6 +5,7 @@ import Resource from './containers/resource';
 import Home from './containers/home';
 import User from './containers/user';
 import Dashboard from './containers/dashboard';
+import About from './containers/About';
 import NotFound from './containers/404';
 import './App.css'
 
@@ -81,6 +82,10 @@ class App extends Component {
       {
         path: "dashboard",
         container: <Dashboard />
+      },
+      {
+        path: "about",
+        container: <About />
       }
     ]
 
