@@ -17,7 +17,7 @@ const MainSidebar = () => {
 
             <ul>
                 <li>
-                    <a href="/">
+                    <a href="">
                         <i className="fa fa-home fa-2x"></i>
                         <span className="nav-text">
                             Home
@@ -63,7 +63,7 @@ const MainSidebar = () => {
 
             <ul className="dashboard">
                 <li>
-                   <a href="/dashboard">
+                   <a href="dashboard">
                          <i className="fa fa-user-circle fa-2x"></i>
                         <span className="nav-text">
                             Dashboard
